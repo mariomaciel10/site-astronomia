@@ -2,7 +2,13 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  background: linear-gradient(to bottom, #000010, #020024, #090979);
+  background: 
+    linear-gradient(to bottom, #000010, #020024, #090979),
+    radial-gradient(white 2px, transparent 2px);
+}
+
+section {
+  display: none;/* esconde as informações*/
 }
 
 div {
@@ -30,7 +36,7 @@ a {
   text-decoration: none;
   transition: 0.3s;
 }
-
+/*hover é quando mause passa porsima do link(a)*/
 a:hover {
   color: white;
   text-shadow: 0 0 10px #00ccff;
@@ -60,7 +66,7 @@ p {
 ul {
   list-style: square;
 }
-
+/* body after = elemento falso */
 body::after {
   content: "";
   position: fixed;
@@ -72,4 +78,10 @@ body::after {
   background-size: 50px 50px;
   opacity: 0.2;
   z-index: -1;
+/*
+::after → cria uma camada extra
+radial-gradient → faz as estrelas
+background-size → espalha elas
+z-index: -1 → manda pro fundo
+*/
 }
