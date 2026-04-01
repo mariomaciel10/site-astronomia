@@ -1,30 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.querySelector('.search-text')
-    const sections = document.querySelectorAll('div[id]')
+    const secoes = document.querySelectorAll('.conteudo')
+    const links = document.querySelectorAll('a[href^="#"]')
 
-    // 🔍 Busca
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase().trim()
-
-            sections.forEach(section => {
-                const content = (section.textContent + section.id).toLowerCase()
-
-                section.style.display =
-                    (!term || content.includes(term)) ? 'block' : 'none'
-            })
-        })
-    }
-
-    // 🔗 Navegação
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
+    links.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault()
+            const idAlvo = link.getAttribute('href')
+            const alvo = document.querySelector(idAlvo)
 
-            sections.forEach(s => s.style.display = 'none')
+            if (alvo) {
+                // 1. Esconde todas as seções antes de mostrar a nova
+                secoes.forEach(s => {
+                    s.classList.remove('visivel')
+                    s.style.display = 'none'
+                });
 
-            const alvo = document.querySelector(link.getAttribute('href'))
-            if (alvo) alvo.style.display = 'block'
+                // 2. Mostra a seção clicada com um pequeno delay para a animação funcionar
+                alvo.style.display = 'block'
+                setTimeout(() => {
+                    alvo.classList.add('visivel')
+                }, 10)
+            }
         })
     })
 })

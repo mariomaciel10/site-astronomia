@@ -1,97 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <link rel="stylesheet" href="./src/css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HISTORIA DA ASTRONOMIA APRESENTADA </title>
+  <title>História da Astronomia</title>
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
-
 <body>
-  <div>
-    <div class="search-box"> <!--É um container (caixa) que agrupa tudo da barra de pesquisa.-->
-      <input type="text" class="search-text" placeholder="pesquisar" > <!--Esse é o campo onde o usuário digita-->
-      <a class="search-btn">
-    </div>
-    <div>
-    <h1>Astronomia</h1>
-      <a href="#historia">História</a>
-      <br>
-      <a href="#origem">Origem</a>
-      <br>
-      <a href="#povos">Povos</a>
-      <br>
-      <a href="#constelacoes">Constelações</a>
-      <br>
-      <a href="#estrelas">Estrelas</a>
-    </div>
 
-  <div id="historia">
-    <h2>História da Astronomia</h2>
-    <a href="#pre-historia">#Pre-historia</a>
-    <a href="#Idade Antiga">Idade Antiga</a>
-    <a href="#Idade Media">Idade Media</a>
-    <a href="#Idade Moderna">Idade Moderna</a>
-    <a href="#Idade Contemporanea">Idade Contemporanea</a>
+  <div class="menu-principal">
+    <h1>Astronomia</h1>
+    <div class="search-box">
+      <input type="text" class="search-text" placeholder="Pesquisar...">
+    </div>
+    
+    <nav>
+      <a href="#historia">História</a>
+      <a href="#origem">Origem</a>
+      <a href="#povos">Povos</a>
+      <a href="#constelacoes">Constelações</a>
+      <a href="#estrelas">Estrelas</a>
+    </nav>
   </div>
 
-  <section id="pre-historia">
-  <h2>Pre-historia</h2>
-  
-  <p>Desde o início, o homem sempre olhou para o céu em busca de possíveis correlações entre <br>
-    as suas <strong>histórias e os fenômenos cósmicos</strong>. Essas primeiras observações eram frutos da <br>
-    imaginação e da criatividade humana</p>
+  <!-- SEÇÕES DE CONTEÚDO -->
+  <div id="historia" class="conteudo">
+    <h2>História da Astronomia</h2>
+    <a href="#pre-historia">#Pre-historia</a>
+    <a href="#idade-antiga">Idade Antiga</a>
+    <a href="#idade-media">Idade Media</a>
+    <a href="#idade-moderna">Idade Moderna</a>
+    <a href="#idade-contemporanea">Idade Contemporanea</a>
+  </div>
 
-    <p>
-      O primeiro conhecimento astronômico do homem pré-histórico consistiu essencialmente na <br>
-      previsão dos movimentos de objetos celestiais visíveis, como estrelas e planetas. Um exemplo de ferramenta na astronomia antiga <br>
-      são os primeiros monumentos astronômicos megalíticos, como o famoso complexo de Stonehenge, os montes de Newgrange, os <br>
-      Menir e os vários outros edifícios projetados com a função de observar o espaço sideral.
-    </p>
+  <section id="pre-historia" class="conteudo">
+    <h2>Pré-história</h2>
+    <p>O homem sempre olhou para o céu em busca de correlações entre histórias e fenômenos...</p>
   </section>
 
-  <section id ="Idade Antiga">
-    ...
+  <section id="idade-antiga" class="conteudo">
+    <h2>Idade Antiga</h2>
+    <p>Observações dos babilônios e gregos...</p>
   </section>
 
-  <section id="Idade Media">
-  ...
-  </section>
-
-  <section id="Idade Moderna">
-  ...
-  </section>
-  
-  <section id="Idade Contemporanea">
-  ...
-  </section>
-
-  <section id="origem">
+  <section id="origem" class="conteudo">
     <h2>Como surgiu</h2>
-    <p>Surgiu com povos antigos observando o movimento do Sol, Lua e estrelas...</p>
+    <p>Surgiu com povos antigos observando o Sol e a Lua...</p>
   </section>
 
-  <section id="povos">
-    <h2>Povos que utilizavam</h2>
-    <p>Egípcios, babilônios, gregos e maias utilizavam a astronomia...</p>
-  </section>
+  <!-- Adicione as outras seções seguindo o mesmo padrão class="conteudo" -->
 
-  <section id="constelacoes">
-    <h2>Constelações</h2>
-    <p>As constelações são grupos de estrelas que formam desenhos no céu...</p>
-  </section>
-
-  <section id="estrelas">
-    <h2>Estrelas famosas</h2>
-    <ul>
-      <li>Sol</li>
-      <li>Sirius</li>
-      <li>Betelgeuse</li>
-      <li>Rigel</li>
-    </ul>
-  </section>
-
-</div>
-<script src="./src/js/script.js"></script>
+  <script src="./src/js/script.js"></script>
 </body>
 </html>
